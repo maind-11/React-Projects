@@ -1,0 +1,112 @@
+@mixin box {
+    display: flex;
+    border-radius: 5px;
+    box-shadow: 0px 10px 20px 2px rgb(116, 110, 189);
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+
+}
+
+#container {
+    height: 700px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgb(164, 158, 248);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#comment_form {
+    @include box;
+
+    img {
+        height: 80px;
+    }
+}
+
+#input {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+
+    textarea {
+        resize: none;
+        height: 100px;
+    }
+
+    button {
+        width: 80px;
+        height: 40px;
+        align-self: flex-end;
+        margin: 10px 0px;
+        background-color: rgb(164, 158, 248);
+        color: white;
+        border: none;
+    }
+
+    button:hover {
+        border: 1px solid rgb(116, 110, 189);
+    }
+
+}
+
+#comment_box {
+    @include box;
+    flex-direction: column;
+    margin-top: 10px;
+
+    #comment {
+        display: flex;
+        margin: 10px 0;
+
+
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        #comment_content {
+            flex: 3;
+            margin: 10px 0px 0px 10px;
+        }
+
+        #edit_comment {
+            display: none;
+            flex-direction: column;
+            flex: 3;
+            padding: 10px 20px 0px 10px;
+
+            input {
+                width: 100%;
+                height: 30px;
+            }
+
+            #save {
+                margin-top: 5px;
+                align-self: flex-end;
+                width: 50px;
+                height: 25px;
+                background-color: rgb(164, 158, 248);
+                color: white;
+                border: none;
+
+            }
+        }
+
+        #delete {
+            height: 20px;
+            margin-right: 20px;
+            background-color: rgb(245, 106, 106);
+        }
+    }
+
+}

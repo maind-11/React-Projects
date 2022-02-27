@@ -1,0 +1,25 @@
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: rgb(255, 107, 107);
+    align-items: center;
+    padding: 10px;
+
+    ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+
+        li a {
+            text-decoration: none;
+            color: white;
+            margin-left: 2em;
+            font-weight: bold;
+        }
+
+        li a:hover {
+            color: rgb(255, 107, 107);
+        }
+    }
+}

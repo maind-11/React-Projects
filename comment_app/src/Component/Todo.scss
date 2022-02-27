@@ -1,0 +1,95 @@
+$mobile_screen:470px;
+
+
+
+@mixin box {
+    width: 50%;
+    margin: 20px auto;
+    border: 1px solid black;
+    height: auto;
+    padding: 20px;
+}
+
+@mixin button_style {
+    border-radius: 30px;
+    width: 100px;
+    height: 30px;
+    font-weight: bold;
+}
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#header_todoApp {
+    background-color: cornflowerblue;
+    color: white;
+    text-align: center;
+    height: 50px;
+}
+
+#form {
+
+    @include box;
+
+    h3,
+    label,
+    input,
+    button,
+    #error {
+        margin: 10px;
+    }
+
+    input {
+        width: 60%;
+        height: 40px;
+        font-size: 15px;
+        border: 2px solid black;
+        border-radius: 4px;
+    }
+
+    button {
+        @include button_style;
+        background-color: rgb(127, 214, 132);
+    }
+
+    #error {
+        color: rgb(245, 106, 106);
+        font-weight: bold;
+    }
+
+}
+
+#todoList {
+
+    #todo {
+        @include box;
+        display: flex;
+        justify-content: space-between;
+
+        h3 {
+            padding-left: 10px;
+            border-left: 15px solid cornflowerblue;
+        }
+
+        button {
+            @include button_style;
+            background-color: rgb(245, 106, 106);
+        }
+    }
+
+}
+
+@media screen and (max-width:$mobile_screen) {
+
+    #form,
+    #todoList {
+        width: 90%;
+    }
+
+    #form input {
+        width: 90%;
+    }
+}
